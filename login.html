@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>AGROWTEIN LABS</title>
+    <meta charset="utf-8">
+    <title>AGROWTEIN</title>
+    <meta content>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Agrowtein Labs Private Limited" name="keywords">
+    <meta content="Agrowtein Labs Private Limited, Agrowtein, automation, Agriculture, Agrowtein Labs," name="keywords">
     <meta content="Startup" name="description">
-
-     <!-- Favicon -->
-     <link href="./img/leaf.png" rel="icon">
+    <link rel="icon" href="favicon.png" type="image/png">
 
      <!-- Google Web Fonts -->
      <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,17 +30,81 @@
 
 
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
-    }
-    .countdown-container {
-      text-align: center;
-      margin-top: 100px;
-    }
-    .countdown {
-      font-size: 30px;
-    }
+body {
+    background-color: #f0f0f0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    /* display: flex; */
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./img/Header.jpg);
+    background-size: cover;
+    backdrop-filter: blur(10px);
+  }
+  .container {
+    margin-top: 10%;
+    background-color: #ffffffc2;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    width: 400px; /* Adjust width as needed */
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  input {
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  label {
+    font-size: 12px;
+    color: #666;
+    width: 100%;
+  }
+  .btn-login {
+    background-color: #345ed1;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  .btn-login:hover {
+    background-color: #2e4ecf;
+  }
+  .btn-external-login{
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    margin: 5px 0;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 90%;
+    border: 1px solid #e0e0e0; 
+}
+.btn-external-login img{
+    width: 20px;
+    margin-right: 10px;
+    background: transparent;
+}
+.btn-external-login:hover{
+    background-color: #e0e0e0;
+}
+
+
   </style>
 
 </head>
@@ -73,15 +136,15 @@
     <!-- Topbar End -->
 
     <!-- Navbar Start -->
-    <div class="container-fluid position-relative p-0">
+    <!-- <div class="container-fluid position-relative p-0">
         <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
             <a href="index.html" class="navbar-brand p-0">
                 <img src="./img/Logo png.png" alt="Startup Logo" class="me-2" width="200" height="50">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
+            </button> -->
+            <!-- <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
                     <a href="index.html" class="nav-item nav-link">Home</a>
                     <a href="about.html" class="nav-item nav-link">About us</a>
@@ -97,10 +160,10 @@
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
                 </div>
                 <a href="#" class="btn btn-success py-2 px-4 ms-3 active">Log In</a>
-            </div>
-        </nav>
+            </div> -->
+        <!-- </nav> -->
 
-        <div class="container-fluid bg-success py-5 bg-header" style="margin-bottom: 90px;">
+        <!-- <div class="container-fluid bg-success py-5 bg-header" style="margin-bottom: 90px;">
             <div class="row py-5">
                 <div class="col-12 pt-lg-5 mt-lg-5 text-center">
                     <h1 class="display-4 text-success animated zoomIn">Welcome to Agrowtein Labs Pvt. Ltd.</h1>
@@ -110,10 +173,10 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Navbar End -->
 
-    <div class="modal fade" id="searchModal" tabindex="-1">
+    <!-- <div class="modal fade" id="searchModal" tabindex="-1">
         <div class="modal-dialog modal-fullscreen">
             <div class="modal-content" style="background: rgba(9, 30, 62, .7);">
                 <div class="modal-header border-0">
@@ -127,15 +190,42 @@
                 </div>
             </div>
         </div>
+    </div> -->
+
+
+<div class="container">
+    <form action="">
+        <div class="conatainer">
+            <h2 style="text-align: center;">Login</h2>
+            <Label for=""> Email</Label>
+            <input type="email" placeholder="...your email">
+            <label for=""> Password </label>
+            <input type="password" placeholder="...your password">
+            <a href="main.html" class="btn-login" style="display: inline-block; text-align: center;">Login</a>
+            <p class="Signup">
+                Forget your Password? <a href="#" class="link"> Restart</a>
+            </p>
+            <!-- <a href="another-page.html" class="btn-login">Login</a> -->
+
+        <hr>
+        <a class="btn-external-login"> <img src="./img/google.png" alt=""> <span> Continue with Google</span></a><br>
+        <a class="btn-external-login"> <img src="./img/fb.png" alt=""> <span> Continue with Facebook</span></a>
     </div>
-
-  <div class="countdown-container">
-    <h1>Our Login portal will update soon:</h1>
+    </form>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<!-- <h3 class="align-items-center">Connect with us for the updates and readings of your Agventure Pump
+</h3> -->
+    <!-- <h1>Our Login portal will update soon:</h1>
     <div class="countdown" id="countdown"></div>
-  </div>
+  </div> -->
 
-  <script>
-    // Set the countdown date (Year, Month (0-11), Day, Hour, Minute, Second)
+  <!-- <script> -->
+    <!-- // Set the countdown date (Year, Month (0-11), Day, Hour, Minute, Second)
     const countdownDate = new Date(2024, 2, 10, 12, 0, 0).getTime();
 
     const countdownElement = document.getElementById('countdown');
@@ -156,6 +246,6 @@
         countdownElement.innerHTML = "Login page is now available!";
       }
     }, 1000);
-  </script>
+  </script> -->
 </body>
 </html>
