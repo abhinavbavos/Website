@@ -1,114 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <title>AGROWTEIN</title>
-    <meta content>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Agrowtein Labs Private Limited, Agrowtein, automation, Agriculture, Agrowtein Labs," name="keywords">
     <meta content="Startup" name="description">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.js"></script>
+    <link href="./login.css" rel="stylesheet" />
     <link rel="icon" href="favicon.png" type="image/png">
 
-     <!-- Google Web Fonts -->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
- 
-     <!-- Icon Font Stylesheet -->
-     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
- 
-     <!-- Libraries Stylesheet -->
-     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-     <link href="lib/animate/animate.min.css" rel="stylesheet">
- 
-     <!-- Customized Bootstrap Stylesheet -->
-     <link href="css/bootstrap.min.css" rel="stylesheet">
- 
-     <!-- Template Stylesheet -->
-     <link href="css/style.css" rel="stylesheet">
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-  <style>
-body {
-    background-color: #f0f0f0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin: 0;
-    padding: 0;
-    /* display: flex; */
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    background-image: url(./img/Header.jpg);
-    background-size: cover;
-    backdrop-filter: blur(10px);
-  }
-  .container {
-    margin-top: 10%;
-    background-color: #ffffffc2;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    width: 400px; /* Adjust width as needed */
-  }
-  form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  input {
-    margin: 10px 0;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    width: 100%;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  }
-  label {
-    font-size: 12px;
-    color: #666;
-    width: 100%;
-  }
-  .btn-login {
-    background-color: #345ed1;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    width: 100%;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  }
-  .btn-login:hover {
-    background-color: #2e4ecf;
-  }
-  .btn-external-login{
-    background-color: #f0f0f0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 20px;
-    margin: 5px 0;
-    border-radius: 10px;
-    cursor: pointer;
-    width: 90%;
-    border: 1px solid #e0e0e0; 
-}
-.btn-external-login img{
-    width: 20px;
-    margin-right: 10px;
-    background: transparent;
-}
-.btn-external-login:hover{
-    background-color: #e0e0e0;
-}
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
 
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-  </style>
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
 
 </head>
-
 
 <body>
 
@@ -117,41 +45,51 @@ body {
         <div class="row gx-0">
             <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
                 <div class="d-inline-flex align-items-center" style="height: 45px;">
-                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>Startup valley TBI,Kanjirappally</small>
+                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>Startup valley
+                        TBI,Kanjirappally</small>
                     <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+91 95626 03120</small>
                     <small class="text-light"><i class="fa fa-envelope-open me-2"></i>info@agrowtein.com</small>
                 </div>
             </div>
             <div class="col-lg-4 text-center text-lg-end">
                 <div class="d-inline-flex align-items-center" style="height: 45px;">
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-twitter fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.linkedin.com/company/agrowteinlabs"><i class="fab fa-linkedin-in fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-instagram fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-youtube fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i
+                            class="fab fa-twitter fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" 
+                        href="https://www.facebook.com/profile.php?id=61557335125818"><i
+                            class="fab fa-facebook-f fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
+                        href="https://www.linkedin.com/company/agrowteinlabs"><i
+                            class="fab fa-linkedin-in fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
+                        href="https://www.instagram.com/agrowteinlabs?igsh=MThhMTM2czVwZnBhdw=="><i
+                            class="fab fa-instagram fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i
+                            class="fab fa-youtube fw-normal"></i></a>
                 </div>
             </div>
         </div>
     </div>
     <!-- Topbar End -->
 
+
     <!-- Navbar Start -->
-    <!-- <div class="container-fluid position-relative p-0">
+    <div class="container-fluid position-relative p-0">
         <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
             <a href="index.html" class="navbar-brand p-0">
                 <img src="./img/Logo png.png" alt="Startup Logo" class="me-2" width="200" height="50">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
-            </button> -->
-            <!-- <div class="collapse navbar-collapse" id="navbarCollapse">
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
                     <a href="index.html" class="nav-item nav-link">Home</a>
                     <a href="about.html" class="nav-item nav-link">About us</a>
                     <a href="service.html" class="nav-item nav-link">Products and Services</a>
                     <a href="blog.html" class="nav-item nav-link">Blog</a>
                     <div class="nav-item dropdown">
-                        <a href="feature.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                         <div class="dropdown-menu m-0">
                             <a href="feature.html" class="dropdown-item">Features</a>
                             <a href="team.html" class="dropdown-item">Team Members</a>
@@ -159,93 +97,87 @@ body {
                     </div>
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
                 </div>
-                <a href="#" class="btn btn-success py-2 px-4 ms-3 active">Log In</a>
-            </div> -->
-        <!-- </nav> -->
-
-        <!-- <div class="container-fluid bg-success py-5 bg-header" style="margin-bottom: 90px;">
-            <div class="row py-5">
-                <div class="col-12 pt-lg-5 mt-lg-5 text-center">
-                    <h1 class="display-4 text-success animated zoomIn">Welcome to Agrowtein Labs Pvt. Ltd.</h1>
-                    <a href="" class="h5 text-success"><strong>Home</strong></a>
-                    <i class="far fa-circle text-black px-2"></i>
-                    <a href="" class="h5 text-success"><strong>Log In</strong></a>
-                </div>
+                <!-- <a href="login.html" class="btn btn-success py-2 px-4 ms-3">Log In</a> -->
             </div>
-        </div>
-    </div> -->
-    <!-- Navbar End -->
-
-    <!-- <div class="modal fade" id="searchModal" tabindex="-1">
-        <div class="modal-dialog modal-fullscreen">
-            <div class="modal-content" style="background: rgba(9, 30, 62, .7);">
-                <div class="modal-header border-0">
-                    <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body d-flex align-items-center justify-content-center">
-                    <div class="input-group" style="max-width: 600px;">
-                        <input type="text" class="form-control bg-transparent border-successbg-success p-3" placeholder="Type search keyword">
-                        <button class="btn btn-successbg-success px-4"><i class="bi bi-search"></i></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
-
-<div class="container">
-    <form action="">
-        <div class="conatainer">
-            <h2 style="text-align: center;">Login</h2>
-            <Label for=""> Email</Label>
-            <input type="email" placeholder="...your email">
-            <label for=""> Password </label>
-            <input type="password" placeholder="...your password">
-            <a href="main.html" class="btn-login" style="display: inline-block; text-align: center;">Login</a>
-            <p class="Signup">
-                Forget your Password? <a href="#" class="link"> Restart</a>
-            </p>
-            <!-- <a href="another-page.html" class="btn-login">Login</a> -->
-
-        <hr>
-        <a class="btn-external-login"> <img src="./img/google.png" alt=""> <span> Continue with Google</span></a><br>
-        <a class="btn-external-login"> <img src="./img/fb.png" alt=""> <span> Continue with Facebook</span></a>
+        </nav>
     </div>
-    </form>
-</div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<!-- <h3 class="align-items-center">Connect with us for the updates and readings of your Agventure Pump
-</h3> -->
-    <!-- <h1>Our Login portal will update soon:</h1>
-    <div class="countdown" id="countdown"></div>
-  </div> -->
+    <!-- Navbar End -->
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100">
+                <div class="login100-pic js-tilt" data-tilt>
+                    <img src="/image.png" alt="IMG">
+                </div>
 
-  <!-- <script> -->
-    <!-- // Set the countdown date (Year, Month (0-11), Day, Hour, Minute, Second)
-    const countdownDate = new Date(2024, 2, 10, 12, 0, 0).getTime();
+                <form onsubmit="login()" name="login_form" id="login_form" method="post" action="#"
+                    enctype="multipart/form-data">
+                    <span class="login100-form-title">
+                        <h4>Member Login</h4>
+                    </span>
 
-    const countdownElement = document.getElementById('countdown');
+                    <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+                        <input class="input100" type="text" name="email" id="email" placeholder="Email" required>
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                        </span>
+                    </div>
 
-    const countdownInterval = setInterval(() => {
-      const now = new Date().getTime();
-      const distance = countdownDate - now;
+                    <div class="wrap-input100 validate-input" data-validate="Password is required">
+                        <input class="input100" type="password" name="pass" id="password" placeholder="Password"
+                            required>
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-lock" aria-hidden="true"></i>
+                        </span>
+                    </div>
 
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                    <div class="container-login100-form-btn">
+                        <button class="login100-form-btn">
+                            Login
+                        </button>
+                    </div>
 
-      countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+                    <div class="container-login100-form-btn">
+                        <a href="#" onclick="forgotPass()">Forgot Password</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="card">
+        <div class="card-header">
+            <center>
+                <h3>Login Form</h3>
+            </center>
+        </div>
+        <form onsubmit="login()" id="loginForm" class="card-body px-5 py-4">
+            <center><small><span id="error" style="color: red"></span></small></center>
+            <center><label class="custom-field">
+                    <input id="email" type="text" class="input" required />
+                    <span class="placeholder">Email Id</span>
+                </label><br />
+                <label class="custom-field">
+                    <input id="password" type="password" class="input" required />
+                    <span class="placeholder">Password</span>
+                </label>
+            </center><br /><br />
+            <a href="#" onclick="forgotPass()">Forgot Password</a>
+            <center><button type="submit" class="btn btn-primary">Login</button>
+                <button onclick="signUp()" class="btn btn-secondary">Sign Up</button>
+            </center>
+        </form>
+    </div> -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
 
-      if (distance < 0) {
-        clearInterval(countdownInterval);
-        countdownElement.innerHTML = "Login page is now available!";
-      }
-    }, 1000);
-  </script> -->
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+
+    <script src="firebase.js"></script>
+    <script src="login.js"></script>
 </body>
+
 </html>

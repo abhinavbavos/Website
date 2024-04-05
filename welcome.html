@@ -2,12 +2,13 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AGROWTEIN</title>
-    <meta content>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Agrowtein Labs Private Limited, Agrowtein, automation, Agriculture, Agrowtein Labs," name="keywords">
-    <meta content="Startup" name="description">
+    <link rel="stylesheet" href="./index.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.css" rel="stylesheet" />
     <link rel="icon" href="favicon.png" type="image/png">
 
     <!-- Google Web Fonts -->
@@ -30,14 +31,17 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.js"></script>
+
+
 </head>
 
 <body>
-    <!-- Spinner Start -->
-    <!-- <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner"></div>
+    <!-- <div style="margin:100px">
+        <span id="user" class="message">Hello, <email-id></Email-id></span>
+        <div class="success"><span>Welcome to auth starter, You are successfully loged in!!!</span></div><br />
+        <button class="btn btn-danger" onclick="logout()">Logout</button>
     </div> -->
-    <!-- Spinner End -->
 
 
     <!-- Topbar Start -->
@@ -55,12 +59,14 @@
                 <div class="d-inline-flex align-items-center" style="height: 45px;">
                     <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i
                             class="fab fa-twitter fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" 
+                        href="https://www.facebook.com/profile.php?id=61557335125818"><i
                             class="fab fa-facebook-f fw-normal"></i></a>
                     <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
                         href="https://www.linkedin.com/company/agrowteinlabs"><i
                             class="fab fa-linkedin-in fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
+                        href="https://www.instagram.com/agrowteinlabs?igsh=MThhMTM2czVwZnBhdw=="><i
                             class="fab fa-instagram fw-normal"></i></a>
                     <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i
                             class="fab fa-youtube fw-normal"></i></a>
@@ -81,33 +87,44 @@
     </div>
     <!-- Navbar End -->
 
+
+    <!-- <div style="margin:100px">
+        <span id="user" class="message">Hello, <email-id></Email-id></span>
+        <div class="success"><span>You are successfully loged in!!! <br> <span>Click below to see your datas.</span></span></div><br />
+        <button class="btn btn-danger" onclick="logout()">Logout</button>
+    </div> -->
+    
+
+
     <div class="container">
         <div class="row">
-            <div class="col-sm-6 mb-3 mb-sm-0">
+            <div class="col-sm-6 offset-sm-3"> <!-- Center the card in a column of width 6 and offset it by 3 -->
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title"> <strong>--Welcome to AGROWTEIN--</strong></h5>
-                        <p class="card-text">– your trusted partner in sustainable agriculture
-                            solutions.
+                        <h5 class="card-title"><strong><span id="user" class="message">---Hello, <email-id></Email-id>--- </span></strong></h5>
+                            <div class="success"><span>You are successfully loged in!!! <br> <span>Click below to see your datas.</span></span></div><br />
 
-                            At Agrowtein, we believe in the power of innovation to transform the agricultural landscape
-                            for the better. Our commitment to sustainability, excellence, and farmer empowerment drives
-                            everything we do..</p>
-                        <a href="index.html" class="btn btn-success">Go to Website</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title"><strong>--Monitoring Pump Performance in Paddy Fields--</strong></h5>
-                        <p class="card-text">Our team has been diligently collecting data on the performance of pumps
-                            used in paddy fields to gain insights into their efficiency and effectiveness in irrigation
-                            practices.This data helps us optimize irrigation schedules and minimize water wastage,
-                            contributing to sustainable water management practices.</p>
                         <a href="data.html" class="btn btn-success">Go to Datasheet</a>
+                        <button class="btn btn-danger" onclick="logout()">Logout</button>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+
+    <script src="firebase.js"></script>
+    <script src="welcome.js"></script>
+</body>
+
+</html>
