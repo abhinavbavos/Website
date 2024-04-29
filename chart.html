@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chart.js Sensor Data</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-database.js"></script>
+
+</head>
+<body>
+  <h2>Distance</h2>
+  <canvas id="distanceChart"></canvas>
+
+  <h2>Pressure</h2>
+  <canvas id="pressureChart"></canvas>
+
+  <h2>Voltage</h2>
+  <canvas id="voltageChart"></canvas>
+
+  <script>
+   const firebaseConfig = {
+            apiKey: "AIzaSyDASTrEyzUUBGfrd-dq0Bj0dOA-ec5koqs",
+            authDomain: "auth-45bb2.firebaseapp.com",
+            databaseURL: "https://auth-45bb2-default-rtdb.firebaseio.com",
+            projectId: "auth-45bb2",
+            storageBucket: "auth-45bb2.appspot.com",
+            messagingSenderId: "878513870627",
+            appId: "1:878513870627:web:be6a92763495a023c0de96"
+        };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+  // Reference to your Firebase Realtime Database
+  const database = firebase.database();
+
+  // Create a reference to the 'sensorData' node in your database
+  const sensorDataRef = database.ref('sensorData');
+
+  // Function to format data for Chart.js
+  function formatDataForChart(data) {
+    return {
+      labels: Object.keys(data),
+      datasets: [{
+        label: 'Sensor Data',
+        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+        borderColor: 'rgba(75, 192, 192, 1)',
+        borderWidth: 1,
+        data: Object.values(data).map(val => parseFloat(val))
+      }]
+    };
+  }
+
+  // Function to create stacked line/bar chart using Chart.js
+  function createChart(data) {
+    const ctx = document.getElementById('sensorChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'bar', // You can change the type to 'line' if you prefer
+      data: data,
+      options: {
+        scales: {
+          y: {
+            stacked: true
+          }
+        }
+      }
+    });
+  }
+
+  // Listen for changes in the 'sensorData' node in the database
+  sensorDataRef.on('value', (snapshot) => {
+    const sensorData = snapshot.val();
+    const formattedData = formatDataForChart(sensorData);
+    createChart(formattedData);
+  });
+
+  </script>
+</body>
+</html>
