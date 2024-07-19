@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>AGROWTEIN</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Agrowtein Labs Private Limited, Agrowtein, automation, Agriculture, Agrowtein Labs," name="keywords">
+    <meta content="Startup" name="description">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link href="img/leaf.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        /* styles.css */
+        .certificates-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .certificates-heading {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .certificates-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            width: 100%;
+        }
+
+        .certificate {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 540px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+
+        .card-body {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 10;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .lightbox-content {
+            display: block;
+            margin: auto;
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark px-5 d-none d-lg-block" id="topbar">
+        <div class="row gx-0">
+            <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>Startup valley
+                        TBI,Kanjirappally</small>
+                    <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+91 95626 03120</small>
+                    <small class="text-light"><i class="fa fa-envelope-open me-2"></i>info@agrowtein.com</small>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center text-lg-end">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
+                        href="https://twitter.com/agrowtein"><i class="fab fa-twitter fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
+                        href="https://www.facebook.com/profile.php?id=61557335125818"><i
+                            class="fab fa-facebook-f fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
+                        href="https://www.linkedin.com/company/agrowteinlabs"><i
+                            class="fab fa-linkedin-in fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
+                        href="https://www.instagram.com/agrowteinlabs?igsh=MThhMTM2czVwZnBhdw=="><i
+                            class="fab fa-instagram fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
+                        href="https://www.youtube.com/@agrowteinlabs"><i class="fab fa-youtube fw-normal"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative p-0" id="navbar">
+        <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0"
+            style="backdrop-filter: blur(10px);background-color: #FFFFFF5C;">
+            <a href="index.html" class="navbar-brand p-0">
+                <img src="./img/Logo png.png" alt="Startup Logo" class="me-2" width="200" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About us</a>
+                    <a href="service.html" class="nav-item nav-link">Products and Services</a>
+                    <a href="blog.html" class="nav-item nav-link">Blog</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="team.html" class="dropdown-item">Team Members</a>
+                            <a href="certificates.html" class="dropdown-item active">Certificates</a>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container-fluid bg-success py-5 bg-header" style="margin-bottom: 90px;">
+            <div class="row py-5">
+                <div class="col-12 pt-lg-5 mt-lg-5 text-center">
+                    <h1 class="display-4 text-success animated zoomIn">Certificates</h1>
+                    <a href="" class="h5 text-black"><strong>Home</strong></a>
+                    <i class="far fa-circle text-black px-2"></i>
+                    <a href="" class="h5 text-black"><strong>Certificates</strong></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Certificates Section -->
+    <div class="certificates-container">
+        <h1 class="certificates-heading">We are Recognized By:</h1>
+        <br>
+        <br>
+
+        <div class="certificates-grid">
+            <div class="certificate">
+                <div class="card mb-3">
+                    <img src="./img/certificate-2.jpg" class="img-fluid rounded-start" alt="Certificate 1">
+                    <div class="card-body">
+                        <h5 class="card-title"> Startup India Certificate</h5>
+                        <p class="card-text">As a proud participant in the Startup India initiative, Agrowtein Labs
+                            Private Limited is recognized for its innovative contributions to the agricultural
+                            technology sector. This certificate signifies our commitment to driving sustainable growth
+                            and development through cutting-edge automation solutions for agriculture. We are dedicated
+                            to transforming the future of farming and contributing to India's mission of becoming a
+                            global innovation hub.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="certificate">
+                <div class="card mb-3">
+                    <img src="./img/certificate-1.jpg" class="img-fluid rounded-start" alt="Certificate 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Kerala Startup Mission Certififcate</h5>
+                        <p class="card-text">Agrowtein Labs Private Limited is honored to be recognized by the Kerala
+                            Startup Mission (KSUM) for its innovative strides in agricultural technology. This
+                            certificate acknowledges our efforts to revolutionize farming practices with advanced
+                            automation solutions. We are committed to supporting Kerala's vision of fostering
+                            entrepreneurship and innovation within the state.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="certificate">
+                <div class="card mb-3">
+                    <img src="./img/certificate-3.jpg" class="img-fluid rounded-start" alt="Certificate 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Department of MSME Certificate</h5>
+                        <p class="card-text">Agrowtein Labs Private Limited is proud to be recognized by the Department
+                            of Micro, Small and Medium Enterprises (MSME). This certificate highlights our dedication to
+                            fostering innovation and growth within the agricultural technology sector. We are committed
+                            to contributing to the development of MSMEs and supporting India's economic progress through
+                            sustainable and innovative solutions.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat for other certificates -->
+        </div>
+
+        <!-- Lightbox Modal -->
+        <div id="lightbox" class="lightbox">
+            <span class="close">&times;</span>
+            <img class="lightbox-content" id="lightbox-img">
+        </div>
+    </div>
+
+<br>
+<br>
+<br>
+<br>
+
+<!-- Vendor Start -->
+<div class="section-title text-center position-relative pb-3 mb-4 mx-auto" style="max-width: 600px;">
+    <h5 class="fw-bold text-success text-uppercase">Our Supporting Partners</h5>
+</div>
+
+<div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.2s">
+<div class="container py-5 mb-4">
+<div class="bg-white">
+    <div class="owl-carousel vendor-carousel">
+        <img src="./img/icreate.png" alt="">
+        <img src="./img/Kovilakath.png" alt="">
+        <img src="./img/KUFOS.png" alt="">
+        <img src="./img/NIT.png" alt="">
+        <img src="./img/KAU.png" alt="">
+        <img src="./img/Ajce.png" alt="">
+        <img src="./img/biic .jpg" alt="">
+        <img src="./img/MGU.png" alt="">
+    </div>
+</div>
+</div>
+</div>
+<!-- Vendor End -->
+
+
+
+
+     <!-- Footer Start -->
+ <div class="container-fluid bg-dark text-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container">
+        <div class="row gx-5">
+            <div class="col-lg-4 col-md-6 footer-about">
+                <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-success p-4">
+                    <a href="index.html" class="navbar-brand p-0">
+                        <img src="./img/Logo png w.png" alt="Agrowtein" class="me-2" width="200" height="50">
+                        <!-- <h1 class="m-0">Agrowtein</h1> -->
+                    </a>
+                    <p class="mt-3 mb-4"></p>
+                    <form action="">
+                        <div class="input-group">
+                            <input type="text" class="form-control border-black p-3" placeholder="Your Email">
+                            <button class="btn btn-dark">Sign Up</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-6">
+                <div class="row gx-5">
+                    <div class="col-lg-7 col-md-12 pt-5 mb-5">
+                        <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                            <h3 class="text-light mb-0">Get In Touch</h3>
+                        </div>
+                        <div class="d-flex mb-2">
+                            <i class="bi bi-geo-alt text-success me-2"></i>
+                            <p class="mb-lg-0">Startup Valley TBI,Kanjirappally</p>
+                        </div>
+                        <div class="d-flex mb-2">
+                            <i class="bi bi-envelope-open text-success me-2"></i>
+                            <p class="mb-0">info@agrowtein.com</p>
+                        </div>
+                        <div class="d-flex mb-2">
+                            <i class="bi bi-telephone text-success me-2"></i>
+                            <p class="mb-0">+91 95626 03120</p>
+                        </div>
+                        <div class="d-flex mt-4">
+                            <a class="btn btn-success btn-square me-2" href="https://twitter.com/agrowtein">
+                                <i class="fab fa-twitter fw-normal"></i>
+                            </a>
+                            <a class="btn btn-success btn-square me-2" href="https://www.facebook.com/profile.php?id=61557335125818">
+                                <i class="fab fa-facebook-f fw-normal"></i>
+                            </a>
+                            <a class="btn btn-success btn-square me-2" href="https://www.linkedin.com/company/agrowteinlabs">
+                                <i class="fab fa-linkedin-in fw-normal"></i>
+                            </a>
+                            <a class="btn btn-success btn-square me-2" href="https://www.instagram.com/agrowteinlabs/">
+                                <i class="fab fa-instagram fw-normal"></i>
+                            </a>
+                            <a class="btn btn-success btn-square me-2" href="https://www.youtube.com/@agrowteinlabs">
+                                <i class="fab fa-youtube fw-normal"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                        <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                            <h3 class="text-light mb-0">Quick Links</h3>
+                        </div>
+                        <div class="link-animated d-flex flex-column justify-content-start">
+                            <a class="text-light mb-2" href="index.html"><i class="bi bi-arrow-right text-success me-2"></i>Home</a>
+                            <a class="text-light mb-2" href="about.html"><i class="bi bi-arrow-right text-success me-2"></i>About Us</a>
+                            <a class="text-light mb-2" href="service.html"><i class="bi bi-arrow-right text-success me-2"></i>Products & Services</a>
+                            <a class="text-light mb-2" href="team.html"><i class="bi bi-arrow-right text-success me-2"></i>Meet The Team</a>
+                            <a class="text-light mb-2" href="blog.html"><i class="bi bi-arrow-right text-success me-2"></i>Latest Blog</a>
+                            <a class="text-light" href="contact.html"><i class="bi bi-arrow-right text-success me-2"></i>Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid text-white" style="background: #061429;">
+    <div class="container text-center">
+        <div class="row justify-content-end">
+            <div class="col-lg-8 col-md-6">
+                <div class="d-flex align-items-center justify-content-center" style="height: 75px;">
+                    <p class="mb-0">&copy; <a class="text-white border-bottom" href="#">Agrowtein Labs Pvt Ltd</a>. All Rights Reserved. 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+    <script>
+        // JavaScript for Lightbox functionality
+        const certificates = document.querySelectorAll('.certificate img');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeBtn = document.querySelector('.close');
+
+        certificates.forEach(certificate => {
+            certificate.addEventListener('click', () => {
+                lightbox.style.display = 'block';
+                lightboxImg.src = certificate.src;
+            });
+        });
+
+        closeBtn.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.style.display = 'none';
+            }
+        });
+    </script>
+
+
+ <!-- Back to Top -->
+ <a href="index.html" class="btn btn-lg btn-success btn-lg-square rounded back-to-top">
+    <i class="bi bi-arrow-up"></i>
+</a>
+
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="lib/wow/wow.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/counterup/counterup.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+
+<!-- Template Javascript -->
+<script src="js/main.js"></script>
+</body>
+
+
+
+</html>
