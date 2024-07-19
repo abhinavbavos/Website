@@ -123,6 +123,11 @@
         .hidden {
             display: none !important;
         }
+
+        /* Hide elements when lightbox is active */
+        .hide-when-lightbox-active {
+            display: none;
+        }
     </style>
 </head>
 
@@ -160,9 +165,8 @@
     <!-- Topbar End -->
 
     <!-- Navbar Start -->
-    <div class="container-fluid position-relative p-0" id="navbar">
-        <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0"
-            style="backdrop-filter: blur(10px);background-color: #FFFFFF5C;">
+    <div class="container-fluid position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0" style="backdrop-filter: blur(10px);background-color: #FFFFFF5C;">
             <a href="index.html" class="navbar-brand p-0">
                 <img src="./img/Logo png.png" alt="Startup Logo" class="me-2" width="200" height="50">
             </a>
@@ -179,39 +183,39 @@
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                         <div class="dropdown-menu m-0">
                             <a href="team.html" class="dropdown-item">Team Members</a>
-                            <a href="certificates.html" class="dropdown-item active">Certificates</a>
+                            <a href="certificates.html" class="dropdown-item active">Certificates </a>
+
                         </div>
                     </div>
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
                 </div>
+                <!-- <a href="login.html" class="btn btn-success py-2 px-4 ms-3">Log In</a> -->
             </div>
         </nav>
 
-        <div class="container-fluid bg-success py-5 bg-header" style="margin-bottom: 90px;">
+
+        <div class="container-fluid bg-successtext-success py-5 bg-header" style="margin-bottom: 90px;">
             <div class="row py-5">
                 <div class="col-12 pt-lg-5 mt-lg-5 text-center">
                     <h1 class="display-4 text-success animated zoomIn">Certificates</h1>
-                    <a href="" class="h5 text-black"><strong>Home</strong></a>
-                    <i class="far fa-circle text-black px-2"></i>
-                    <a href="" class="h5 text-black"><strong>Certificates</strong></a>
+                    <a href="" class="h5 text-success">Home</a>
+                    <i class="far fa-circle text-success px-2"></i>
+                    <a href="" class="h5 text-success">Certificates</a>
                 </div>
             </div>
         </div>
     </div>
     <!-- Navbar End -->
 
-    <!-- Certificates Section -->
-    <div class="certificates-container">
-        <h1 class="certificates-heading">We are Recognized By:</h1>
-        <br>
-        <br>
 
+    <div class="container certificates-container" id="certificates">
+        <h2 class="certificates-heading">We are Recognized by:</h2>
         <div class="certificates-grid">
             <div class="certificate">
-                <div class="card mb-3">
-                    <img src="./img/certificate-2.jpg" class="img-fluid rounded-start" alt="Certificate 1">
+                <div class="card">
+                    <img src="./img/certificate-2.jpg" alt="Certificate 1">
                     <div class="card-body">
-                        <h5 class="card-title"> Startup India Certificate</h5>
+                        <h5 class="card-title">StratUp India Certificate</h5>
                         <p class="card-text">As a proud participant in the Startup India initiative, Agrowtein Labs
                             Private Limited is recognized for its innovative contributions to the agricultural
                             technology sector. This certificate signifies our commitment to driving sustainable growth
@@ -221,12 +225,11 @@
                     </div>
                 </div>
             </div>
-
             <div class="certificate">
-                <div class="card mb-3">
-                    <img src="./img/certificate-1.jpg" class="img-fluid rounded-start" alt="Certificate 2">
+                <div class="card">
+                    <img src="./img/certificate-1.jpg" alt="Certificate 2">
                     <div class="card-body">
-                        <h5 class="card-title">Kerala Startup Mission Certififcate</h5>
+                        <h5 class="card-title"> Kerala StratUp Mission Certificate</h5>
                         <p class="card-text">Agrowtein Labs Private Limited is honored to be recognized by the Kerala
                             Startup Mission (KSUM) for its innovative strides in agricultural technology. This
                             certificate acknowledges our efforts to revolutionize farming practices with advanced
@@ -235,12 +238,11 @@
                     </div>
                 </div>
             </div>
-
             <div class="certificate">
-                <div class="card mb-3">
-                    <img src="./img/certificate-3.jpg" class="img-fluid rounded-start" alt="Certificate 3">
+                <div class="card">
+                    <img src="./img/certificate-3.jpg" alt="Certificate 3">
                     <div class="card-body">
-                        <h5 class="card-title">Department of MSME Certificate</h5>
+                        <h5 class="card-title"> Department of MSME Certificate</h5>
                         <p class="card-text">Agrowtein Labs Private Limited is proud to be recognized by the Department
                             of Micro, Small and Medium Enterprises (MSME). This certificate highlights our dedication to
                             fostering innovation and growth within the agricultural technology sector. We are committed
@@ -249,14 +251,13 @@
                     </div>
                 </div>
             </div>
-            <!-- Repeat for other certificates -->
+            <!-- Add more certificates as needed -->
         </div>
+    </div>
 
-        <!-- Lightbox Modal -->
-        <div id="lightbox" class="lightbox">
-            <span class="close">&times;</span>
-            <img class="lightbox-content" id="lightbox-img">
-        </div>
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
     </div>
 
 <br>
@@ -264,7 +265,7 @@
 <br>
 <br>
 
-<!-- Vendor Start -->
+    <!-- Vendor Start -->
 <div class="section-title text-center position-relative pb-3 mb-4 mx-auto" style="max-width: 600px;">
     <h5 class="fw-bold text-success text-uppercase">Our Supporting Partners</h5>
 </div>
@@ -287,10 +288,7 @@
 </div>
 <!-- Vendor End -->
 
-
-
-
-     <!-- Footer Start -->
+    <!-- Footer Start -->
  <div class="container-fluid bg-dark text-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
     <div class="container">
         <div class="row gx-5">
@@ -376,55 +374,60 @@
 </div>
 <!-- Footer End -->
 
+    <!-- Back to Top -->
+    <a href="index.html" class="btn btn-lg btn-success btn-lg-square rounded back-to-top">
+        <i class="bi bi-arrow-up"></i>
+    </a>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+
+
+
+    <!-- Custom Lightbox Script -->
     <script>
         // JavaScript for Lightbox functionality
         const certificates = document.querySelectorAll('.certificate img');
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = document.getElementById('lightbox-img');
         const closeBtn = document.querySelector('.close');
+        const elementsToHide = document.querySelectorAll('#topbar, #navbar, .certificates-container, .section-title, .container-fluid');
 
         certificates.forEach(certificate => {
             certificate.addEventListener('click', () => {
                 lightbox.style.display = 'block';
                 lightboxImg.src = certificate.src;
+                elementsToHide.forEach(element => element.classList.add('hide-when-lightbox-active'));
             });
         });
 
         closeBtn.addEventListener('click', () => {
             lightbox.style.display = 'none';
+            elementsToHide.forEach(element => element.classList.remove('hide-when-lightbox-active'));
         });
 
         lightbox.addEventListener('click', (e) => {
             if (e.target === lightbox) {
                 lightbox.style.display = 'none';
+                elementsToHide.forEach(element => element.classList.remove('hide-when-lightbox-active'));
             }
         });
     </script>
-
-
- <!-- Back to Top -->
- <a href="index.html" class="btn btn-lg btn-success btn-lg-square rounded back-to-top">
-    <i class="bi bi-arrow-up"></i>
-</a>
-
-
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
-<!-- JavaScript Libraries -->
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="lib/wow/wow.min.js"></script>
-<script src="lib/easing/easing.min.js"></script>
-<script src="lib/waypoints/waypoints.min.js"></script>
-<script src="lib/counterup/counterup.min.js"></script>
-<script src="lib/owlcarousel/owl.carousel.min.js"></script>
-
-
-<!-- Template Javascript -->
-<script src="js/main.js"></script>
 </body>
-
-
 
 </html>
